@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="img/icons8-movie-64.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>моёKино</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="">
+                    <h1 class="logo">мо<span class="alph">ё</span>Кино</h1>
+                </a>
+
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-hover menu-list-item active">Главная</li>
+                    <li class="menu-hover menu-list-item">Кино</li>
+                    <li class="menu-hover menu-list-item">Сериалы</li>
+                    <li class="menu-hover menu-list-item">Популярное</li>
+                    <li class="menu-hover menu-list-item">Тренды</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.png" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Профиль</span>
+                    <i class="profile-arrow fa-solid fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-regular fa-sun toggle-icon"></i>
+                    <div class="toggle-ball">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <i class="icon-hover left-menu-icon fa-solid fa-magnifying-glass"></i>
+            <i class="icon-hover left-menu-icon fa-solid fa-house"></i>
+            <i class="icon-hover left-menu-icon fa-solid fa-users"></i>
+            <i class="icon-hover left-menu-icon fa-solid fa-bookmark"></i>
+            <i class="icon-hover left-menu-icon fa-solid fa-tv"></i>
+            <i class="icon-hover left-menu-icon fa-solid fa-hourglass-start"></i>
+            <i class="icon-hover left-menu-icon fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="container">
+            <div class="content-container">
+                <div class="featured-content"
+                    style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url('img/f-1.jpg');">
+                    <img src="img/f-t-1.png" alt="" class="featured-title">
+                    <p class="featured-desc dark">Как всегда, Дикий Запад наполнен бандитами и головорезами. Терроризм
+                        процветает на территории небольшого городка, пока в нем не появляется защитник слабых и
+                        угнетенных Джанго. Он появляется ниоткуда, притащив за собой на веревке гроб с «секретом».
+                        Трудна миссия по защите угнетенных, но, как всегда, выполнима, тем более, если за дело берется
+                        Джанго.</p>
+                    <button class="featured-button">СМОТРЕТЬ</button>
+                </div>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">Новые релизы</h1>
+                    <div class="movie-list-wrapper">
+
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <img src="img/1.jpeg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Она</span>
+                                <p class="movie-list-item-desc">«Она́» (англ. Her) — американская
+                                    фантастическая мелодрама режиссёра и сценариста Спайка Джонза.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/2.jpeg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Звёздные войны</span>
+                                <p class="movie-list-item-desc">Фильм завершает невероятную историю семьи Скайуокеров,
+                                    длящуюся уже более сорока лет, и обещает дать ответы на все загадки.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/3.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Дежавю</span>
+                                <p class="movie-list-item-desc">Увлекательный триллер
+                                    который заставляет зрителей пересмотреть своё восприятие времени и пространства.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/4.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">1917</span>
+                                <p class="movie-list-item-desc">Действия фильма происходят в 1917 году в
+                                    самый разгар Первой мировой войны. В центре сюжета оказываются двое юных солдат.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/5.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Мсти́тели</span>
+                                <p class="movie-list-item-desc">«Мсти́тели»
+                                    американский супергеройский фильм 2012 года,
+                                    основанный на команде из комиксов Marvel Comics.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/6.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Рэмпейдж</span>
+                                <p class="movie-list-item-desc">Все началось еще в 1993 году.
+                                    Именно тогда ученые начали исследования
+                                    в области генетического редактирования.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/7.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Игра Эндера</span>
+                                <p class="movie-list-item-desc">Когда враждебные инопланетяне называют
+                                    «Фырки», атакуют Землю, только легендарные герои смогли достичь победы.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/8.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Обливион</span>
+                                <p class="movie-list-item-desc">В 2077 году Джек Харпер работает
+                                    в качестве ремонтника на земле, оставленном
+                                    опустошенным после войны с инопланетянами.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/20.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Субстанция</span>
+                                <p class="movie-list-item-desc">Слава звезды
+                                    Элизабет осталась в прошлом, хоть она всё ещё ведёт
+                                    популярное фитнес-шоу на телевидении.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/21.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">
+                                    Ужасающий 3 </span>
+                                <p class="movie-list-item-desc">Клоун-маньяк Арт собирается расправиться
+                                    с жителями округа Майлз, когда они мирно засыпают в канун Рождества.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-caret-right arrow"></i>
+                    </div>
+                </div>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">Популярные</h1>
+                    <div class="movie-list-wrapper">
+
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <img src="img/9.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Хоббит</span>
+                                <p class="movie-list-item-desc">Продолжение трилогии
+                                    «Властелин колец», которая поведает о новых захватывающих приключениях удивительных
+                                    героев.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/10.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Впритык</span>
+                                <p class="movie-list-item-desc">"Впритык" — это захватывающая комедийная ахтунг-экшен,
+                                    которая бросает зрителя в вихрь приключений и комических ситуаций.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/11.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Пипец 2</span>
+                                <p class="movie-list-item-desc">В реальной жизни не встретишь супергероя из комиксов,
+                                    зато в ней есть настоящие герои.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/12.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Эмоджи </span>
+                                <p class="movie-list-item-desc">Если бы не фильм «Эмоджи фильм», вы так и не узнали бы о
+                                    существовании такого города, как Текстополис. Его жители – эмоджи.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/13.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Зло возвращается</span>
+                                <p class="movie-list-item-desc">Джайдев, известный поэт, встречает девушку, которая не
+                                    помнит о ее прошлом. Он приносит ее домой и пытается помочь ей.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/14.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Тропы славы</span>
+                                <p class="movie-list-item-desc">Во время Первой мировой войны генерал приказывает своему
+                                    подчиненному, атаковать немецкую позицию.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/15.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Лего Бэтмен</span>
+                                <p class="movie-list-item-desc">В Готэме есть большие изменения, но если Бэтмен хочет
+                                    спасти город от враждебного поглощения Джокера.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/16.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">1920 Лондон</span>
+                                <p class="movie-list-item-desc">Шиванги и Вир живут в Лондоне. Они хорошо обустроили
+                                    свою совместную жизнь, которые им
+                                    приходилось преодолевать в Индии.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/17.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">АКВАМЕН </span>
+                                <p class="movie-list-item-desc">Аквамен, отпрыск королевы подводного царства и человека,
+                                    с детства был разлучен с матерью, рос и взрослел на земле под опекой отца..</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/19.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Человек-паук</span>
+                                <p class="movie-list-item-desc">В детстве Питер Паркер был оставлен своими родителями, и
+                                    поэтому воспитывался дядей и тётей. </p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-caret-right arrow"></i>
+                    </div>
+                </div>
+                <div class="featured-content"
+                    style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url('img/f-2.jpg');">
+                    <img src="img/f-t-2.png" alt="" class="featured-title">
+                    <p class="featured-desc dark">История четырёх семей, живущих спокойной и размеренной жизнью в
+                        маленьком
+                        немецком городке. Видимая идиллия рушится, когда бесследно исчезают двое детей и воскресают
+                        тёмные тайны прошлого.</p>
+                    <button class="featured-button">СМОТРЕТЬ</button>
+                </div>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">Аниме</h1>
+                    <div class="movie-list-wrapper">
+
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <img src="img/s1.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Терминатор Зеро</span>
+                                <p class="movie-list-item-desc">2022: Мир погружён в хаос уже десятилетия, где остатки
+                                    человечества ведут отчаянную борьбу за выживание
+                                </p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/s2.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Синяя тюрьма</span>
+                                <p class="movie-list-item-desc">Сборная Японии по футболу собирается выиграть мировое
+                                    первенство.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/s3.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Текен</span>
+                                <p class="movie-list-item-desc">Герою предстоит найти своего деда, который сможет
+                                    обучить его боевым навыкам и принять участие в турнире «Король Железного Кулака».
+                                </p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/s4.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Киберпанк</span>
+                                <p class="movie-list-item-desc">В этом мире живет наемник по имени Киберпанк, о котором
+                                    и пойдет речь.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/s5.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Пузырь </span>
+                                <p class="movie-list-item-desc">Однажды легендарный паркурщик Хибики, попадает в
+                                    гравитационный излом</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/s6.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Летнее время</span>
+                                <p class="movie-list-item-desc">Узнав о смерти сводной сестры Усио, Симпэй возвращается
+                                    в родной город Вакаяма на остров Хитогасиме для ее похорон</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/s7.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Суперзлодеи</span>
+                                <p class="movie-list-item-desc">Джон Болт немного засиделся в тюрьме. Этот шулер отлично
+                                    знает, что на свободе его ждут «великие» дела. </p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/s8.jpg" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Ая и ведьма</span>
+                                <p class="movie-list-item-desc">Эрвиг — сирота, которая живет в детском доме Св.
+                                    Морвальда. Но однажды девочка попадает в таинственный дом.
+                                </p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-caret-right arrow"></i>
+                    </div>
+                </div>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">Сериалы</h1>
+                    <div class="movie-list-wrapper">
+
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <img src="img/a1.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Игра престолов</span>
+                                <p class="movie-list-item-desc">Рыцари, мертвецы и драконы —
+                                    в эпической битве за судьбы мира. Сериал, который навсегда изменил телевидение</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/a2.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Во все тяжкие</span>
+                                <p class="movie-list-item-desc">Школьный учитель химии Уолтер Уайт узнаёт,
+                                    что болен раком лёгких. Уолтер решает заняться изготовлением метамфетамина.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/a3.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Сопрано</span>
+                                <p class="movie-list-item-desc">Мафиозный босс Северного Джерси Тони Сопрано
+                                    эффективно решает проблемы «семьи». Он решает
+                                    тайно посещать психотерапевта.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/a4.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Друзья </span>
+                                <p class="movie-list-item-desc">Шестеро друзей – Рейчел, Моника, Фиби, Джоуи, Чендлер
+                                    и Росс – живут по соседству, делятся секретами
+                                    и иногда очень сильно влюбляются.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/a5.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Звоните Солу</span>
+                                <p class="movie-list-item-desc">История об испытаниях и невзгодах, которые приходится
+                                    преодолеть Солу Гудману, адвокату по уголовным делам</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/a6.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Офис </span>
+                                <p class="movie-list-item-desc">Сериал о трудовых буднях небольшого регионального офиса
+                                    крупной компании, должны терпеть закидоны своего
+                                    непутевого босса.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/a7.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Тед Лассо</span>
+                                <p class="movie-list-item-desc">Тренер сборной колледжа Канзаса по американскому
+                                    футболу Тед Лассо — неисправимый оптимист, всеобщий любимец и звезда YouTube. </p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img src="img/a8.webp" alt="" class="movie-list-item-img">
+                                <span class="movie-list-item-title">Доктор Хаус</span>
+                                <p class="movie-list-item-desc">Сериал рассказывает о команде врачей,
+                                    которые должны правильно поставить диагноз пациенту и спасти его.</p>
+                                <button class="movie-list-item-button">СМОТРЕТЬ</button>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-caret-right arrow"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+</body>
+
+</html>
