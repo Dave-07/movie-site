@@ -51,7 +51,6 @@ ball.addEventListener('click', () => {
    });
 */
 
-// console.log(obj);
 // let queryDelimeter = "?";
 // let parameterSeparator = "&";
 // let oid = "-25468809";
@@ -304,9 +303,8 @@ function closePlayer(event) {
 async function playerFullscreen(){
     
     await player.requestFullscreen();
-    player.focus();
     
-    // Optional: Use Screen Wake Lock API
+    ////Screen Wake Lock API
     if ('wakeLock' in navigator) {
         try {
             const wakeLock = await navigator.wakeLock.request('screen');
@@ -316,12 +314,6 @@ async function playerFullscreen(){
         }
     }
 
-    //// for debug
-    if(!document.fullscreenElement){
-        console.log('Exited fullscreen');
-    }else {
-        console.log('Entered fullscreen');
-    }
 }
 
 
