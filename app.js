@@ -36,6 +36,66 @@ ball.addEventListener('click', () => {
 });
 
 
+let player = document.querySelector('.myPlayer');
+let playButtons = document.querySelectorAll('.movie-list-item-button, .featured-button');
+// oid=-218222949&id=456239102&hash=a4efd51477ace647
+// let queryDelimeter = "?";
+// let parameterSeparator = "&";
+let oid = "-218222949";
+let id = "456239102";
+let hash = "a4efd51477ace647";
+let url = `https://vk.com/video_ext.php`;
+let autoplay = '1';
+let body = document.querySelector('body');
+let overlay = document.querySelector('.darken');
+playButtons = Array.from(playButtons);
+
+
+
+
+
+function openPlayer(event){
+    let parent = event.target.parentElement;
+        let img = parent.querySelector('img');
+        let src = img.getAttribute('src');
+    
+        player.style.transform = "translate(-50%, -50%)";
+        player.style.opacity = 1;
+        id = 'dJTU48_yghs';
+        overlay.classList.add('overlay')
+        player.setAttribute('src', `${url}?oid=${oid}&id=${id}&hash=${hash}&autoplay=${autoplay}`);
+       
+
+        setTimeout(function(){
+            player.style.transition = 'transform 0s';
+        }, 1000);
+       
+
+        // console.log(src);
+
+}
+
+function closePlayer(event) {
+    let targetClass = event.target.className;
+    let overlayClass = 'darken overlay';
+
+    if (targetClass == overlayClass) {
+        player.style.transition = 'transform 1s';
+        overlay.classList.remove('overlay');
+        player.style.transform = 'translateX(1000%)';
+        setTimeout(function(){
+            player.setAttribute('src', "");
+        }, 500);
+    }
+}
+
+
+playButtons.forEach(el => {
+    el.addEventListener('click', openPlayer);
+});
+
+
+body.addEventListener('click', closePlayer);
 
 
 
