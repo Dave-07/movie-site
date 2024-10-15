@@ -52,7 +52,6 @@ ball.addEventListener('click', () => {
     console.log(imgSrc);
 */
 
-<iframe src="" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
 let player = document.querySelector('.myPlayer');
 let playButtons = document.querySelectorAll('.movie-list-item-button, .featured-button');
