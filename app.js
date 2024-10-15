@@ -37,7 +37,6 @@ ball.addEventListener('click', () => {
     ball.classList.toggle('active');
 });
 
-
 /*player functionality*/
 
 /*script to retrieve data from element
@@ -55,7 +54,6 @@ ball.addEventListener('click', () => {
 // console.log(obj);
 // let queryDelimeter = "?";
 // let parameterSeparator = "&";
-
 // let oid = "-25468809";
 // let id = "456239566";
 // let hash = "68d547f91a459e87";
@@ -302,15 +300,27 @@ function closePlayer(event) {
 }
 
 
+async function playerFullscreen(){
+    
+    await player.requestFullscreen();
+    
+    // Optional: Use Screen Wake Lock API
+    if ('wakeLock' in navigator) {
+        try {
+            const wakeLock = await navigator.wakeLock.request('screen');
+            console.log('Wake Lock is active');
+        } catch (err) {
+            console.error(`Failed to acquire wake lock: ${err.name}, ${err.message}`);
+        }
+    }
+}
+
+
 body.addEventListener('click', closePlayer);
 
-player.addEventListener('onload', function(e){
-    player.requestFullscreen().catch(err => {
-        console.error(`Error attempting to enable fullscreen: ${err.message}`);
-    });
-})
 
 playButtons.forEach(el => {
     el.addEventListener('click', openPlayer);
+    el.addEventListener('click', playerFullscreen);
 });
 
