@@ -36,35 +36,266 @@ ball.addEventListener('click', () => {
 });
 
 
+
+
+
+
+
+
+/*
+    let parent = el.parentElement;
+    let titleEl = parent.querySelector(`.movie-list-item-title`);
+    let img = parent.querySelector('img');
+    let imgSrc = img.src.split('/').splice(-1).join('');
+    let tName = titleEl?.textContent ?? 'custom';
+    arr.push({title: tName, src: imgSrc});
+    console.log(imgSrc);
+*/
+
+<iframe src="" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
 let player = document.querySelector('.myPlayer');
 let playButtons = document.querySelectorAll('.movie-list-item-button, .featured-button');
-// oid=-218222949&id=456239102&hash=a4efd51477ace647
+let rawObj = JSON.stringify([
+    {
+        "title": "Джанго",
+        "src": "f-t-1.png",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-210693593&id=456239019&hash=cfada1edf85f0cd7"
+    },
+    {
+        "title": "Она",
+        "src": "1.jpeg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-25468809&id=456239566&hash=68d547f91a459e87"
+    },
+    {
+        "title": "Звёздные войны",
+        "src": "2.jpeg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-209477587&id=456245628&hash=362f626d8bc9f192"
+    },
+    {
+        "title": "Дежавю",
+        "src": "3.jpg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-212730940&id=456239064&hash=9ed15f521aece716"
+    },
+    {
+        "title": "1917",
+        "src": "4.jpg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-218222949&id=456239102&hash=a4efd51477ace647"
+    },
+    {
+        "title": "Мстители",
+        "src": "5.jpg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-214045512&id=456243994&hash=4997248e9a00fd80"
+    },
+    {
+        "title": "Рэмпейдж",
+        "src": "6.jpg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-176294899&id=456248919&hash=4f0d6471fe8a89b6"
+    },
+    {
+        "title": "Игра Эндера",
+        "src": "7.jpg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-220018529&id=456240498&hash=ff874820c06166b4"
+    },
+    {
+        "title": "Обливион",
+        "src": "8.jpg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-220018529&id=456240377&hash=6f14983078500fe4"
+    },
+    {
+        "title": "Субстанция",
+        "src": "20.jpg",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-219402587&id=456239053&hash=f07eb63393e77e50"
+    },
+    {
+        "title": "Ужасающий 3 ",
+        "src": "21.webp",
+        "videoUrl": "https://vk.com/video_ext.php?oid=-196534124&id=456239614&hash=645772434970c9af"
+    },
+    {
+        "title": "Хоббит",
+        "src": "9.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Впритык",
+        "src": "10.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Пипец 2",
+        "src": "11.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Эмоджи ",
+        "src": "12.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Зло возвращается",
+        "src": "13.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Тропы славы",
+        "src": "14.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Лего Бэтмен",
+        "src": "15.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "1920 Лондон",
+        "src": "16.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "АКВАМЕН ",
+        "src": "17.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Человек-паук",
+        "src": "19.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Тьма",
+        "src": "f-t-2.png",
+        "videoUrl": ""
+    },
+    {
+        "title": "Терминатор Зеро",
+        "src": "s1.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Синяя тюрьма",
+        "src": "s2.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Текен",
+        "src": "s3.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Киберпанк",
+        "src": "s4.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Пузырь ",
+        "src": "s5.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Летнее время",
+        "src": "s6.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Суперзлодеи",
+        "src": "s7.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Ая и ведьма",
+        "src": "s8.jpg",
+        "videoUrl": ""
+    },
+    {
+        "title": "Игра престолов",
+        "src": "a1.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Во все тяжкие",
+        "src": "a2.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Сопрано",
+        "src": "a3.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Друзья ",
+        "src": "a4.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Звоните Солу",
+        "src": "a5.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Офис ",
+        "src": "a6.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Тед Лассо",
+        "src": "a7.webp",
+        "videoUrl": ""
+    },
+    {
+        "title": "Доктор Хаус",
+        "src": "a8.webp",
+        "videoUrl": ""
+    }
+]);
+let obj = JSON.parse(rawObj);
+// console.log(obj);
 // let queryDelimeter = "?";
 // let parameterSeparator = "&";
-let oid = "-218222949";
-let id = "456239102";
-let hash = "a4efd51477ace647";
-let url = `https://vk.com/video_ext.php`;
-let autoplay = '1';
+
+// let oid = "-25468809";
+// let id = "456239566";
+// let hash = "68d547f91a459e87";
+// let url = `https://vk.com/video_ext.php`;
+// let autoplay = '1';
+
 let body = document.querySelector('body');
 let overlay = document.querySelector('.darken');
+
 playButtons = Array.from(playButtons);
 
-
-
-
+body.addEventListener('click', closePlayer);
 
 function openPlayer(event){
-    let parent = event.target.parentElement;
+        let parent = event.target.parentElement;
         let img = parent.querySelector('img');
-        let src = img.getAttribute('src');
+        let src = img.getAttribute('src').split('/').splice(-1).join('');
+        
+
+        // let titleEl = parent.querySelector(`.movie-list-item-title`);
+        // titleEl = titleEl ?? parent.querySelector(`.featured-title`);
+        // let titleSrc = titleEl.getAttribute('src');
     
+        // console.log(src);
+
+        // let fullUrl = `${url}?oid=${oid}&id=${id}&hash=${hash}&autoplay=${autoplay}`;
+        let matchObj = obj.filter(el => el.src === src)[0];
+        let url = matchObj.videoUrl;
+        
+
         player.style.transform = "translate(-50%, -50%)";
         player.style.opacity = 1;
-        id = 'dJTU48_yghs';
-        overlay.classList.add('overlay')
-        player.setAttribute('src', `${url}?oid=${oid}&id=${id}&hash=${hash}&autoplay=${autoplay}`);
-       
+        player.setAttribute('src', url);
+        overlay.classList.add('overlay');
+
+        console.log(matchObj.videoUrl);
+        console.log(player);
+
+        // player.setAttribute('src', fullUrl);
+        // console.log(fullUrl)
+        //https://vk.com/video_ext.php?oid=-25468809&id=456239566&hash=68d547f91a459e87
+        // console.log(`${url}?oid=${oid}&id=${id}&hash=${hash}&autoplay=${autoplay}`);
+        // console.log(`https://vk.com/video_ext.php?oid=-25468809&id=456239566&hash=68d547f91a459e87`);
 
         setTimeout(function(){
             player.style.transition = 'transform 0s';
@@ -83,19 +314,25 @@ function closePlayer(event) {
         player.style.transition = 'transform 1s';
         overlay.classList.remove('overlay');
         player.style.transform = 'translateX(1000%)';
+
         setTimeout(function(){
             player.setAttribute('src', "");
         }, 500);
     }
 }
 
+let arr = [];
+// console.log(playButtons[1].parentElement.querySelectorAll('')[0]);
+// console.log(node.textContent);
 
 playButtons.forEach(el => {
+    // let parent = el.parentElement;
+    // let titleEl = parent.querySelector(`.movie-list-item-title`);
+    // let img = parent.querySelector('img');
+    // let imgSrc = img.src.split('/').splice(-1).join('');
+    // let tName = titleEl?.textContent ?? 'custom';
+    // arr.push({title: tName, src: imgSrc, videoUrl: ""});
+    // console.log(imgSrc);
     el.addEventListener('click', openPlayer);
 });
-
-
-body.addEventListener('click', closePlayer);
-
-
 
