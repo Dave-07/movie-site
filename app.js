@@ -1,3 +1,5 @@
+
+/*slider funcionality*/
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll('.movie-list');
 
@@ -21,7 +23,7 @@ arrows.forEach((arrow, i) => {
    
 });
 
-
+/*dark and light mode switching fnctionality*/
 const ball = document.querySelector('.toggle-ball');
 const items = document.querySelectorAll('.container, .arrow, .movie-list-title, .navbar-container, .sidebar, .left-menu-icon, .toggle');
 const sDark = document.querySelectorAll('.dark');
@@ -36,22 +38,29 @@ ball.addEventListener('click', () => {
 });
 
 
+/*player functionality*/
 
-
-
-
-
-
-/*
+/*script to retrieve data from element
+    playButtons.forEach(el => {
     let parent = el.parentElement;
     let titleEl = parent.querySelector(`.movie-list-item-title`);
     let img = parent.querySelector('img');
     let imgSrc = img.src.split('/').splice(-1).join('');
     let tName = titleEl?.textContent ?? 'custom';
-    arr.push({title: tName, src: imgSrc});
+    arr.push({title: tName, src: imgSrc, videoUrl: ""});
     console.log(imgSrc);
+   });
 */
 
+// console.log(obj);
+// let queryDelimeter = "?";
+// let parameterSeparator = "&";
+
+// let oid = "-25468809";
+// let id = "456239566";
+// let hash = "68d547f91a459e87";
+// let url = `https://vk.com/video_ext.php`;
+// let autoplay = '1';
 
 let player = document.querySelector('.myPlayer');
 let playButtons = document.querySelectorAll('.movie-list-item-button, .featured-button');
@@ -248,66 +257,38 @@ let rawObj = JSON.stringify([
     }
 ]);
 let obj = JSON.parse(rawObj);
-// console.log(obj);
-// let queryDelimeter = "?";
-// let parameterSeparator = "&";
-
-// let oid = "-25468809";
-// let id = "456239566";
-// let hash = "68d547f91a459e87";
-// let url = `https://vk.com/video_ext.php`;
-// let autoplay = '1';
 
 let body = document.querySelector('body');
 let overlay = document.querySelector('.darken');
-
 playButtons = Array.from(playButtons);
 
-body.addEventListener('click', closePlayer);
 
 function openPlayer(event){
         let parent = event.target.parentElement;
         let img = parent.querySelector('img');
         let src = img.getAttribute('src').split('/').splice(-1).join('');
         
-
-        // let titleEl = parent.querySelector(`.movie-list-item-title`);
-        // titleEl = titleEl ?? parent.querySelector(`.featured-title`);
-        // let titleSrc = titleEl.getAttribute('src');
-    
-        // console.log(src);
-
-        // let fullUrl = `${url}?oid=${oid}&id=${id}&hash=${hash}&autoplay=${autoplay}`;
         let matchObj = obj.filter(el => el.src === src)[0];
         let url = matchObj.videoUrl;
         
-
         player.style.transform = "translate(-50%, -50%)";
         player.style.opacity = 1;
-        player.setAttribute('src', url);
+        player.setAttribute('src', `${url}&autoplay=1`);
         overlay.classList.add('overlay');
 
-        console.log(matchObj.videoUrl);
-        console.log(player);
-
-        // player.setAttribute('src', fullUrl);
-        // console.log(fullUrl)
-        //https://vk.com/video_ext.php?oid=-25468809&id=456239566&hash=68d547f91a459e87
-        // console.log(`${url}?oid=${oid}&id=${id}&hash=${hash}&autoplay=${autoplay}`);
-        // console.log(`https://vk.com/video_ext.php?oid=-25468809&id=456239566&hash=68d547f91a459e87`);
+        // console.log(matchObj.videoUrl);
+        // console.log(player);
+        // console.log(`${url}&autoplay=1`);
 
         setTimeout(function(){
             player.style.transition = 'transform 0s';
         }, 1000);
-       
-
-        // console.log(src);
-
 }
+
 
 function closePlayer(event) {
     let targetClass = event.target.className;
-    let overlayClass = 'darken overlay';
+    let overlayClass = Array.from(overlay.classList).join(" ");
 
     if (targetClass == overlayClass) {
         player.style.transition = 'transform 1s';
@@ -320,18 +301,16 @@ function closePlayer(event) {
     }
 }
 
-let arr = [];
-// console.log(playButtons[1].parentElement.querySelectorAll('')[0]);
-// console.log(node.textContent);
+
+body.addEventListener('click', closePlayer);
+
+player.addEventListener('onload', function(e){
+    player.requestFullscreen().catch(err => {
+        console.error(`Error attempting to enable fullscreen: ${err.message}`);
+    });
+})
 
 playButtons.forEach(el => {
-    // let parent = el.parentElement;
-    // let titleEl = parent.querySelector(`.movie-list-item-title`);
-    // let img = parent.querySelector('img');
-    // let imgSrc = img.src.split('/').splice(-1).join('');
-    // let tName = titleEl?.textContent ?? 'custom';
-    // arr.push({title: tName, src: imgSrc, videoUrl: ""});
-    // console.log(imgSrc);
     el.addEventListener('click', openPlayer);
 });
 
