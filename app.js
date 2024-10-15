@@ -62,6 +62,8 @@ ball.addEventListener('click', () => {
 
 let player = document.querySelector('.myPlayer');
 let playButtons = document.querySelectorAll('.movie-list-item-button, .featured-button');
+playButtons = Array.from(playButtons);
+
 let rawObj = JSON.stringify([
     {
         "title": "Джанго",
@@ -255,10 +257,9 @@ let rawObj = JSON.stringify([
     }
 ]);
 let obj = JSON.parse(rawObj);
-
 let body = document.querySelector('body');
 let overlay = document.querySelector('.darken');
-playButtons = Array.from(playButtons);
+
 
 
 function openPlayer(event){
@@ -303,6 +304,7 @@ function closePlayer(event) {
 async function playerFullscreen(){
     
     await player.requestFullscreen();
+    player.focus();
     
     // Optional: Use Screen Wake Lock API
     if ('wakeLock' in navigator) {
@@ -313,11 +315,17 @@ async function playerFullscreen(){
             console.error(`Failed to acquire wake lock: ${err.name}, ${err.message}`);
         }
     }
+
+    //// for debug
+    if(!document.fullscreenElement){
+        console.log('Exited fullscreen');
+    }else {
+        console.log('Entered fullscreen');
+    }
 }
 
 
 body.addEventListener('click', closePlayer);
-
 
 playButtons.forEach(el => {
     el.addEventListener('click', openPlayer);
