@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Permissions-Policy" content="screen-wake-lock=(self)"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="img/icons8-movie-64.png" type="image/x-icon">
@@ -34,11 +35,21 @@
             </div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li class="menu-hover menu-list-item active">Главная</li>
-                    <li class="menu-hover menu-list-item">Кино</li>
-                    <li class="menu-hover menu-list-item">Сериалы</li>
-                    <li class="menu-hover menu-list-item">Популярное</li>
-                    <li class="menu-hover menu-list-item">Тренды</li>
+                    <a href="">
+                        <li class="menu-hover menu-list-item active">Главная</li>
+                    </a>
+                    <a href="#arrivals">
+                        <li class="menu-hover menu-list-item">Кино</li>
+                    </a>
+                    <a href="#series">
+                        <li class="menu-hover menu-list-item">Сериалы</li>
+                    </a>
+                    <a href="#popular">
+                        <li class="menu-hover menu-list-item">Популярное</li>
+                    </a>
+                    <a href="#anime">
+                        <li class="menu-hover menu-list-item">Аниме</li>
+                    </a>
                 </ul>
             </div>
             <div class="profile-container">
@@ -70,10 +81,12 @@
         <div class="darken"></div>
         <div class="container">
 
-            <iframe class="myPlayer" width="40%" height="60%" src="" title="Vk video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen="1">
-            </iframe>
+            <div class="player-container">
+                <iframe class="myPlayer" width="40%" src="" height="60%" title="Vk video player" frameborder="0"
+                    allowfullscreen="1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+                </iframe>
+            </div>
 
 
 
@@ -90,7 +103,7 @@
                 </div>
 
                 <div class="movie-list-container">
-                    <h1 class="movie-list-title">Новые релизы</h1>
+                    <h1 id="arrivals" class="movie-list-title">Новые релизы</h1>
                     <div class="movie-list-wrapper">
 
                         <div class="movie-list">
@@ -174,7 +187,7 @@
                     </div>
                 </div>
                 <div class="movie-list-container">
-                    <h1 class="movie-list-title">Популярные</h1>
+                    <h1 id="popular" class="movie-list-title">Популярное</h1>
                     <div class="movie-list-wrapper">
 
                         <div class="movie-list">
@@ -264,7 +277,7 @@
                     <button class="featured-button">СМОТРЕТЬ</button>
                 </div>
                 <div class="movie-list-container">
-                    <h1 class="movie-list-title">Аниме</h1>
+                    <h1 id="anime" class="movie-list-title">Аниме</h1>
                     <div class="movie-list-wrapper">
 
                         <div class="movie-list">
@@ -332,7 +345,7 @@
                     </div>
                 </div>
                 <div class="movie-list-container">
-                    <h1 class="movie-list-title">Сериалы</h1>
+                    <h1 id="series" class="movie-list-title">Сериалы</h1>
                     <div class="movie-list-wrapper">
 
                         <div class="movie-list">

@@ -2,8 +2,13 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
+
   height: 100%;
 }
 
@@ -39,6 +44,8 @@ a {
 
 .logo-container {
   flex: 2;
+  max-width: 7%;
+  margin-right: 10%;
 }
 
 .logo {
@@ -338,6 +345,10 @@ a {
   transform: translateX(-20px);
 }
 
+a {
+  color: white;
+}
+
 .arrow.active {
   color: grey;
   opacity: 0.9;
@@ -372,6 +383,7 @@ a {
   transition: transform 1s;
   border: none;
 }
+
 
 .overlay {
   position: fixed;
